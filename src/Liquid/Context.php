@@ -233,6 +233,10 @@ class Context
 			return $matches[1];
 		}
 
+		if (preg_match('/^\[([^\]]*)\]$/', $key, $matches)) {
+			return $matches[1];
+		}
+		
 		return $this->variable($key);
 	}
 
